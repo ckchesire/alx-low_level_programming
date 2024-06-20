@@ -1,0 +1,1 @@
+Preprocessing in C modifies source code before compilation by handling `#include` for file inclusion, `#define` for macros, and conditional compilation directives, streamlining code and preparing it for the compiler.
