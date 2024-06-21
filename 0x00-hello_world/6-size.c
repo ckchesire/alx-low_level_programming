@@ -1,21 +1,23 @@
 #include <stdio.h>
-/*
- * Entry point - main
- * @parameter void
- * return '0'
+/**
+ * main - Entry point
+ *
+ * Description: The function  prints out the memory allocation of data types
+ *
+ * Return: Always '0' (Success)
  */
-char c;
-int  i;
-long l;
-long long ll;
-float f;
-
 int main(void)
 {
+	char c;
+	int i;
+	long l;
+	long long ll;
+	float f;
+
 	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(c));
 	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(i));
-	printf("Size of a long: %lu bytes(s)\n", (unsigned long)sizeof(l));
-	printf("Size of long long: %lu bytes(s)\n", (unsigned long)sizeof(ll));
-	printf("Size of  a float: %lu bytes(s)\n", (unsigned long)sizeof(f));
+	printf("Size of a long int: %lu bytes(s)\n", (unsigned long)sizeof(l));
+	printf("Size of a long long int: %lu bytes(s)\n", (unsigned long)sizeof(ll));
+	printf("Size of a float: %lu bytes(s)\n", (unsigned long)sizeof(f));
 	return (0);
 }
