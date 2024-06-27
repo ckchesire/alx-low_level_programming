@@ -2,7 +2,8 @@
 
 /**
  * main - Entry point
- * Return : '0' for success
+ * Description : Print _putchar.
+ * Return: Always '0' (success)
  */
 int main(void)
 {
