@@ -1,8 +1,8 @@
 #include "main.h"
-/*
- * print_square - function prints a square
- * @size: input parameter integer values
- * Return: return square
+/**
+ * print_square - function that prints a square, followed by a new line
+ * @size: input parameter for integer values of squares
+ * Return: return square based on size
  */
 void print_square(int size)
 {
