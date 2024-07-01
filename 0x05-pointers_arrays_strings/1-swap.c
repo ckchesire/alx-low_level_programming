@@ -3,7 +3,7 @@
  * swap_int - Swaps the values of two integers
  * @a: First integer
  * @b: Second integer
- * @Return: void
+ * Return: void
  */
 void swap_int(int *a, int *b)
 {
@@ -12,4 +12,4 @@ void swap_int(int *a, int *b)
 	swap = *a;
 	*a = *b;
 	*b = swap;
-}	
+}
