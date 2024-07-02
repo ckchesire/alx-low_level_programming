@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * puts2 - function prints every other character of a string, starting with first character
+ * puts2 - function prints every other character of a string
  * @str: takes string charaters as input
  * Return: void
  */
