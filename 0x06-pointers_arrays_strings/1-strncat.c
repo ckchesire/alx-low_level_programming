@@ -3,6 +3,7 @@
  * _strncat - function that concatenats two strings
  * @dest: Destination variable to copy string
  * @src: Source variable to copy string from
+ * @n: number of elements to copy
  * Return: returns final concatenated string
  */
 char *_strncat(char *dest, char *src, int n)
@@ -15,17 +16,16 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		ptr++;
 	}
-	
 	if (n == 1)
 	{
 		*ptr++ = *src;
 	}
-	else 
+	else
 	{
 		for (i = 0; i <= n; i++)
 		{
 			*ptr = *src++;
 		}
 	}
-	return dest;
+	return (dest);
 }
