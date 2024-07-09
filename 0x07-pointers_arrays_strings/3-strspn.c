@@ -3,7 +3,7 @@
  * _strspn - function that gets the length of a prefix substring
  * @s: string to be scanned
  * @accept: strings to match
- * Returns: number of bytes in initial segement matched to accept
+ * Return: number of bytes in initial segement matched to accept
  */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -17,12 +17,12 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (accept[n] == s[i])
 			{
-				count ++;
+				count++;
 				match = 1;
 			}
 		}
 		if (match == 0)
 			return (count);
 	}
-	return(count);
+	return (count);
 }
