@@ -6,7 +6,7 @@
  */
 int is_prime_number(int n)
 {
-	return is_prime_helper(n, 2);
+	return (is_prime_helper(n, 2));
 }
 /**
  * is_prime_helper - recursive function to check if number is prime
@@ -29,5 +29,5 @@ int is_prime_helper(int n, int i)
 	{
 		return (0);
 	}
-	return is_prime_helper(n, i + 1);
+	return (is_prime_helper(n, i + 1));
 }
