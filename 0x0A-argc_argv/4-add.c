@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * main - program that adds positive numbers
  * @argc: count arguments
@@ -8,23 +9,22 @@
  */
 int main(int argc, char **argv)
 {
-	int i = 0, sum = 0;
-	if(argc <= 1)
-	{
-		printf("Error\n");
-		return (1);
-	}
+	int i = 0;
+	unsigned int j = 0, sum = 0;
+	char *a;
+
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]))
+		a = argv[i];
+		for (j = 0; j < strlen(a); j++)
 		{
-			sum += atoi(argv[i]);
+			if( a[j] < 48 || a[j] > 57)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
 	return (0);
