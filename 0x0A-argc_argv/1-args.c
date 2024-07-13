@@ -9,12 +9,20 @@
 int main(int argc, char **argv)
 {
 	int count = 0;
-
-	while (argc--)
+	
+	if (argc == 1)
 	{
-		argv++;
-		count++;
+		printf("0\n");
+		return(0);
 	}
-	printf("%d\n", count);
+	if (argc > 1)
+	{
+		while (argc--)
+		{
+			argv++;
+			count++;
+		}
+	}
+	printf("%d\n", count - 1);
 	return (0);
 }
