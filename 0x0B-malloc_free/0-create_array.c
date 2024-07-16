@@ -4,12 +4,13 @@
  * create_array - function that creates an array of chars
  * @size: size of the array
  * @c: character to be initialized
+ * Return: return array of chars
  */
 char *create_array(unsigned int size, char c)
 {
-	unsigned int i = 0;
-
+	unsigned int i;
 	char *A = (char *)malloc(size * sizeof(char));
+
 	for (i = 0; i <= size; i++)
 	{
 		A[i] = c;
