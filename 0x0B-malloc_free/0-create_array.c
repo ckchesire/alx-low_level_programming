@@ -11,9 +11,16 @@ char *create_array(unsigned int size, char c)
 	unsigned int i;
 	char *A = (char *)malloc(size * sizeof(char));
 
-	for (i = 0; i < size; i++)
+	if (size == '0')
 	{
-		A[i] = c;
+		return (NULL);
 	}
-	return (A);
+	else
+	{
+		for (i = 0; i < size; i++)
+		{
+			A[i] = c;
+		}
+		return (A);
+	}
 }
