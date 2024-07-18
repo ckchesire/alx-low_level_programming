@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * argstostr - function that concatenates all the arguments 
+ * argstostr - function that concatenates all the arguments
  * @ac: arguments count
  * @av: array of arguments
  * Return: return new string or NULL if it fails
@@ -36,4 +36,3 @@ char *argstostr(int ac, char **av)
 	s[k] = '\0';
 	return (s);
 }
-		
