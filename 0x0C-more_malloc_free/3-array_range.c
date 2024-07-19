@@ -8,6 +8,7 @@
  */
 int *array_range(int min, int max)
 {
+	int n = 0;
 	int i = 0;
 	int *ptr;
 	int temp_min = min;
@@ -17,8 +18,9 @@ int *array_range(int min, int max)
 	while (temp_min <= max)
 	{
 		temp_min++;
+		n++;
 	}
-	ptr = malloc(sizeof(int) * temp_min);
+	ptr = malloc(sizeof(int) * n);
 	if (ptr == NULL)
 		return (NULL);
 	while (min <= max)
