@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * _calloc - function that allocates memory for an array using malloc
  * @nmemb: no. of array elements
@@ -15,5 +16,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	alloc_mem = malloc(nmemb * size);
 	if (alloc_mem == NULL)
 		return (NULL);
-	return (alloc_mem);
+	return ((int *)alloc_mem);
 }
