@@ -9,7 +9,7 @@ void print_binary(unsigned long int n)
 {
 	int pos;
 	unsigned long int mask;
-	
+
 	if (n == 0)
 	{
 		_putchar('0');
@@ -23,8 +23,8 @@ void print_binary(unsigned long int n)
 	{
 		pos--;
 	}
-	
-	for(; pos>= 0; pos--)
+
+	for (; pos >= 0; pos--)
 	{
 		_putchar((n & (mask << pos)) ? '1' : '0');
 	}
