@@ -31,18 +31,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer[len] = '\0';
 
 	output = fwrite(buffer, sizeof(char), len, stdout);
+	free(buffer);
 	fclose(fp);
-	if (output < 0)
-	{
-		free(buffer);
-		return (0);
-	}
 
 	if (output != len)
-	{
-		free (buffer);
 		return (0);
-	}
-	free(buffer);
 	return (output);
 }
