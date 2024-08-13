@@ -1,5 +1,6 @@
 #include "main.h"
 
+void check_IO_stat(int stat, int fd, char *filename, char mode);
 /**
  * main - program that copies content from one file to another
  * @argc: count of arguments
@@ -14,7 +15,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "%s", "Usage: cp file_from file to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	src = open(argv[1], O_RDONLY);
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
 		if (n_read == -1)
 			check_IO_stat(-1, -1, argv[1], 'O');
 		written = write(dst, buffer, n_read);
-		if (written == -1)
+		if (written == -1 || written != n_read)
 			check_IO_stat(-1, -1, argv[2], 'W');
 	}
 	close_src = close(src);
