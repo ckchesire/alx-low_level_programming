@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- * free_dlistint_t - function that frees a double linked list
+ * free_dlistint - function that frees a double linked list
  * @head: pointer to the start of a linked list
  * Return: nothing
  */
@@ -10,11 +10,11 @@ void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *t;
 
-	while (t)
+	while (head != NULL)
 	{
-		t = head->next;
-		free(head);
-		head = t;
+		t = head;
+		head = head->next;
+		free(t);
 	}
 
 }
