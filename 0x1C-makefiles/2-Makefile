@@ -1,0 +1,16 @@
+# Variable definitions
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o) # Convert .c files into .o files
+NAME = school
+
+# Defualt target
+all: $(NAME)
+
+# Linking rule
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Compile rule for each object file
+%.o: %.c
+	$(CC) -c -o $@ $<
