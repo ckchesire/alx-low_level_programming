@@ -1,0 +1,32 @@
+# Variable definitions
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+
+# Default target
+all: $(NAME)
+
+# Linking rule
+$(NAME) : $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Compile rule for each object file
+%.o: %.c
+	$(CC) -c -o $@ $<
+
+# Clean deletes all Emacs and Vim temporary files along with the executable
+.PHONY: clean, oclean, fclean re
+clean:
+	$(RM) *~ $(NAME)
+
+# deletes the object files)
+oclean:
+	$(RM) $(OBJ)
+
+# Deletes all Emacs and Vim temporary files, the executable, and the object files
+fclean: clean oclean
+
+# Rebuilds the program from scratch
+re: oclean all
