@@ -5,12 +5,13 @@ SRC = main.c school.c
 OBJ = $(SRC:%.c=%.o)
 NAME = school
 
+.PHONY: all clean, oclean, fclean re
+
 # Default target
 all: m.h $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 # Clean deletes all Emacs and Vim temporary files along with the executable
-.PHONY: clean, oclean, fclean re
 clean:
 	$(RM) *~ $(NAME)
 
