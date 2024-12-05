@@ -5,13 +5,7 @@ SRC = main.c school.c
 NAME = school
 
 # Default target
-all: $(NAME)
-
-# Linking rule
-$(NAME) : $(SRC)
-	@if [ ! -f m.h ]; then \
-		echo "Error: m.h is missing."; exit 1; \
-	fi; \
+all: m.h $(SRC)
 	$(CC) $(CFLAGS) $^ -o $@
 
 # Clean deletes all Emacs and Vim temporary files along with the executable
