@@ -2,11 +2,12 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic
 SRC = main.c school.c
+OBJ = $(SRC:%.c=%.o)
 NAME = school
 
 # Default target
-all: m.h $(SRC)
-	$(CC) $(CFLAGS) $^ -o $@
+all: m.h $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 # Clean deletes all Emacs and Vim temporary files along with the executable
 .PHONY: clean, oclean, fclean re
@@ -15,7 +16,7 @@ clean:
 
 # deletes the object files
 oclean:
-	$(RM) *.o
+	$(RM) $(OBJ)
 
 # Deletes all Emacs and Vim temporary files, the executable, and the object files
 fclean: clean oclean
