@@ -1,0 +1,30 @@
+# Variable definitions
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+SRC = main.c school.c
+NAME = school
+
+# Default target
+all: $(NAME)
+
+# Linking rule
+$(NAME) : $(SRC)
+	@if [ ! -f m.h ]; then \
+		echo "Error: m.h is missing."; exit 1; \
+	fi; \
+	$(CC) $(CFLAGS) $^ -o $@
+
+# Clean deletes all Emacs and Vim temporary files along with the executable
+.PHONY: clean, oclean, fclean re
+clean:
+	rm -f *~ $(NAME)
+
+# deletes the object files
+oclean:
+	rm -f *.o
+
+# Deletes all Emacs and Vim temporary files, the executable, and the object files
+fclean: clean oclean
+
+# Rebuilds the program from scratch
+re: fclean all
